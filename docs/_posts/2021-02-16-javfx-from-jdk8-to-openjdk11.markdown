@@ -4,10 +4,10 @@ title:  "JavaFX: from jdk8 to openjdk11!"
 date:   2021-02-16 22:52:49 +0800
 categories: javafx
 ---
-As Oracle [published][javafx-oracle] the libs for JavaFX have been casted out of the JDK to be open sourced to [OpenJFX][javafx-openjfx]: 
+As Oracle [published][javafx-oracle] the libs for JavaFX have been casted out of the JDK to be open sourced to [OpenJFX][javafx-openjfx]
 Therefore when it is time to update you working project to a newer java version, your project build needs to undergo some light adaptations.
 
-### update your Java version
+### Update your Java version
 {% highlight bash %}
 export PATH=$JAVA11_HOME/bin;$PATH
 {% endhighlight %}
@@ -34,7 +34,7 @@ So you can update your maven pom.xml to
 	<version>0.0.5</version>
 	<configuration>
 		<release>11</release>
-		<mainClass>fr.kdefombelle.xmlcompare.gui.XmlCompareGuiMain</mainClass>
+		<mainClass>com.company.MyClassMain</mainClass>
 	</configuration>
 </plugin>
 {% endhighlight %}
@@ -58,7 +58,7 @@ As the JavFX libs are no longer included in the JDK it should be referenced now 
 ### Run in IDE (eclipse)
 Add the following VM arguments
 ```
---module-path "D:\applications\devtools\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml
+--module-path "path/to/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" --add-modules javafx.controls,javafx.fxml
 ```
 
 ### Run in command line
@@ -70,14 +70,14 @@ mvn javafx:run
 
 Note my Java class is as follows:
 {% highlight java %}
-public class XmlCompareGuiMain extends Application {
+public class MyClassMain extends Application {
 
     //~ ----------------------------------------------------------------------------------------------------------------
     //~ Methods 
     //~ ----------------------------------------------------------------------------------------------------------------
 
     public static void main(String[] args) {
-        launch(XmlCompareGuiMain.class, (java.lang.String[]) null);
+        launch(MyClassMain.class, (java.lang.String[]) null);
     }
 	
 {% endhighlight %}
