@@ -40,7 +40,7 @@ So you can update your maven pom.xml to
 
 
 Note my Java class is as follows:
-![alt text]({{site.url}}/docs/_posts/2021-02-16-javafx-main.png "JavaFX Main"){:class="img-responsive"}
+![Java FX](({{ site.url }}/assets/2021-02-16-javafx-main.png){:class="img-responsive"}
 
 {% highlight java %}
 public class XmlCompareGuiMain extends Application {
