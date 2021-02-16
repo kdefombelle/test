@@ -39,19 +39,25 @@ So you can update your maven pom.xml to
 {% endhighlight %}
 
 
-Jekyll also offers powerful support for code snippets:
+Note my Java class is as follows:
+![alt text](https://github.com/kdefombelle/kdefombelle.github.io/blob/gh-pages/docs/_posts/2021-02-16-javafx-main.png "JavaFX Main")
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight java %}
+public class XmlCompareGuiMain extends Application {
+
+    //~ ----------------------------------------------------------------------------------------------------------------
+    //~ Methods 
+    //~ ----------------------------------------------------------------------------------------------------------------
+
+    public static void main(String[] args) {
+        launch(XmlCompareGuiMain.class, (java.lang.String[]) null);
+    }
+	
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Check out the [openjfx doc][javafx-maven] for more info on how to get the most out of maven build in Java 11+ but examplifying a working configuration is always good as the evil is in the details.
 
-[javafx-oracle] https://www.oracle.com/fr/java/technologies/javase/javafx-overview.html
-[javafx-openjfx]: https://openjfx.io/
-[javafx-maven]:   https://openjfx.io/openjfx-docs/#maven
-[javafx-maven-plugin]: https://github.com/openjfx/javafx-maven-plugin
+[javafx-oracle]: <https://www.oracle.com/fr/java/technologies/javase/javafx-overview.html>
+[javafx-openjfx]: <https://openjfx.io/>
+[javafx-maven]:   <https://openjfx.io/openjfx-docs/#maven>
+[javafx-maven-plugin]: <https://github.com/openjfx/javafx-maven-plugin>
