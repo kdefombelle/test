@@ -40,7 +40,7 @@ So you can update your maven pom.xml to
 
 
 Note my Java class is as follows:
-![My image Name](/assets/2021-02-16-javafx-main.jpg)
+![My image Name]({{ site.baseurl }}/assets/2021-02-16-javafx-main.jpg)
 
 {% highlight java %}
 public class XmlCompareGuiMain extends Application {
