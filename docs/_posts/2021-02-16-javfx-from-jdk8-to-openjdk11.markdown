@@ -2,17 +2,17 @@
 layout: post
 title:  "JavaFX: from jdk8 to openjdk11!"
 date:   2021-02-16 22:52:49 +0800
-categories: jekyll update
+categories: javafx
 ---
-As Oracle [published][javafx-oracle] the libs for JavaFX have been casted out the JDK to be open source to [OpenJFX][javafx-openjfx]: 
+As Oracle [published][javafx-oracle] the libs for JavaFX have been casted out of the JDK to be open sourced to [OpenJFX][javafx-openjfx]: 
 Therefore when it is time to update you working project to a newer java version, your project build needs to undergo some light adaptations.
 
-update your Java version
+### update your Java version
 {% highlight bash %}
 export PATH=$JAVA11_HOME/bin;$PATH
 {% endhighlight %}
 
-update your maven compiler configuration
+### update your maven compiler configuration
 {% highlight xml %}
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
@@ -24,7 +24,8 @@ update your maven compiler configuration
 </plugin>
 {% endhighlight %}
 
-in Java 8 you may have used the plugin com.zenjava:org.openjfx, after many years of good and loyal service for Java 11+ it is superseded by [org.openjfx:javafx-maven-plugin][javafx-maven-plugin]
+### update maven javafx plugin
+in Java 8 you may have used the plugin com.zenjava:org.openjfx, after many years of good and loyal service for [Java 11+][openjdk] it is superseded by [org.openjfx:javafx-maven-plugin][javafx-maven-plugin]
 So you can update your maven pom.xml to
 {% highlight xml %}
 <plugin>
@@ -40,10 +41,6 @@ So you can update your maven pom.xml to
 
 
 Note my Java class is as follows:
-![My image Name](https://kdefombelle.github.io/assets/2021-02-16-javafx-main.jpg)
-![useful image](https://kdefombelle.github.io/assets/2021-02-16-javafx-main.png)
-![My image Name](https://kdefombelle.github.io/assets/2021-02-16-javafx-main.jpg)
-
 {% highlight java %}
 public class XmlCompareGuiMain extends Application {
 
@@ -63,3 +60,4 @@ Check out the [openjfx doc][javafx-maven] for more info on how to get the most o
 [javafx-openjfx]: <https://openjfx.io/>
 [javafx-maven]:   <https://openjfx.io/openjfx-docs/#maven>
 [javafx-maven-plugin]: <https://github.com/openjfx/javafx-maven-plugin>
+[openjdk]: <https://openjdk.java.net/projects/jdk/11/>
