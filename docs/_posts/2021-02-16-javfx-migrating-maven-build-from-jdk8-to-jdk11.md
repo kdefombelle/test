@@ -57,16 +57,6 @@ As the JavFX libs are no longer included in the JDK it should be referenced now 
 </dependency>
 ```
 
-### Run in IDE (eclipse)
-Add the following VM arguments
-```
---module-path "path/to/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" --add-modules javafx.controls,javafx.fxml
-```
-![eclipse configuration](/assets/images/2021-02-16-javafx-eclipse.png)
-
-
-![idea configuration](/assets/images/2021-02-16-javafx-idea.png)
-
 ### Run in Command Line
 To compile or build simply run `mvn compile` or `mvn install`, the org.openjfx:javafx-maven-plugin will add for you the necessary libraries.
 To execute the Java FX app from the command line
@@ -82,6 +72,17 @@ public class MyClassMain extends Application {
         launch(MyClassMain.class, (java.lang.String[]) null);
     }
 ```
+
+### Run in IDE
+Add the following VM arguments
+```
+--module-path "path/to/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" --add-modules javafx.controls,javafx.fxml
+```
+![eclipse configuration](/assets/images/2021-02-16-javafx-eclipse.png)
+
+
+![idea configuration](/assets/images/2021-02-16-javafx-idea.png)
+
 
 [javafx-oracle]: <https://www.oracle.com/fr/java/technologies/javase/javafx-overview.html>
 [javafx-openjfx]: <https://openjfx.io/>
