@@ -63,6 +63,7 @@ Add the following VM arguments
 --module-path "path/to/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" --add-modules javafx.controls,javafx.fxml
 ```
 ![eclipse configuration](/assets/2021-02-16-javafx-eclipse.png)
+![idea configuration](/assets/2021-02-16-javafx-idea.png)
 
 ### Run in Command Line
 To compile or build simply run mvn compile or mvn install, the org.openjfx:javafx-maven-plugin will add for you the necessary libraries.
