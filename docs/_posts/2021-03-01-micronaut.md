@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Micronaut"
-date:   2021-02-16 22:52:49 +0800
+date:   2021-03-01 00:00:00 +0800
 categories: micronaut framework java maven
 ---
 As we all know [Spring][spring] there is now a lightweigth and claimed more efficient framework called Micronaut
@@ -38,6 +38,13 @@ public class ServiceController {
   }
 
 }
+```
+
+### Run in Command Line
+To compile or build simply run `mvn compile` or `mvn install`, the org.openjfx:javafx-maven-plugin will add for you the necessary libraries.
+To execute the Java FX app from the command line
+```bash
+mvnw mn:run
 ```
 
 ### Activate Swagger
@@ -87,16 +94,15 @@ Create an *openapi.properties* file in at the root of you project
 swagger-ui.enabled=true
 ```
 
+###Annotate your code
+
+
+
 Swagger
-To access swagger you can activate its 
+To access swagger you can run your app and go to URL http://localhost:8080/swagger-ui 
 
 
-### Run in Command Line
-To compile or build simply run `mvn compile` or `mvn install`, the org.openjfx:javafx-maven-plugin will add for you the necessary libraries.
-To execute the Java FX app from the command line
-```bash
-mvnw mn:run
-```
+
 
 Note my Java class is as follows:
 ```java
