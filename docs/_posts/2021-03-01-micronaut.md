@@ -94,14 +94,10 @@ Create an *openapi.properties* file in at the root of you project
 swagger-ui.enabled=true
 ```
 
-###Annotate your code
-
-
+### Annotate your code
 
 Swagger
 To access swagger you can run your app and go to URL http://localhost:8080/swagger-ui 
-
-
 
 
 Note my Java class is as follows:
@@ -112,16 +108,6 @@ public class MyClassMain extends Application {
         launch(MyClassMain.class, (java.lang.String[]) null);
     }
 ```
-
-### Run in IDE
-Add the following VM arguments
-```
---module-path "path/to/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" --add-modules javafx.controls,javafx.fxml
-```
-![eclipse configuration](/assets/images/2021-02-16-javafx-eclipse.png)
-
-
-![idea configuration](/assets/images/2021-02-16-javafx-idea.png)
 
 
 [spring]: <https://spring.io/>
