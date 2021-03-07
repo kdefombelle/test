@@ -54,6 +54,7 @@ Reference documentation is [Micronaut Open API][micronaut-openapi]
 
 In in your maven pom.xml 
 - add dependencies
+
 ```xml        
 <dependency>
 	<groupId>javax.annotation</groupId>
@@ -68,6 +69,7 @@ In in your maven pom.xml
 ```
 
 - configure annotation processor
+
 ```
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
